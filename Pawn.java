@@ -18,6 +18,10 @@ public class Pawn extends Piece {
         int col = b.convertCol(loc.charAt(0));
         int row = b.convertRow(loc.charAt(1));
         Piece p = b.getPiece(loc);
+	    
+	if(p == null) {
+            throw new UnsupportedOperationException();
+        }
 
         if (p.color() == Color.WHITE) {
             if (row == 7) {
