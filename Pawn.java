@@ -18,10 +18,6 @@ public class Pawn extends Piece {
         int col = b.convertCol(loc.charAt(0));
         int row = b.convertRow(loc.charAt(1));
         Color color = this.color();
-	    
-	if(p == null) {
-           return moves;
-        }
 
         if (color == Color.WHITE) {
             if (row == 7) {
