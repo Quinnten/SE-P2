@@ -15,8 +15,10 @@ abstract public class Piece {
             Color peiceColor;
             if (name.charAt(0) == 'w') {
                 peiceColor = Color.WHITE;
-            } else {
+            } else if (name.charAt(0) == 'b'){
                 peiceColor = Color.BLACK;
+            } else {
+                throw new UnsupportedOperationException();
             }
             return pieces.get(name.charAt(1)).create(peiceColor);
         } else {
