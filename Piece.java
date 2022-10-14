@@ -18,7 +18,11 @@ abstract public class Piece {
             } else {
                 peiceColor = Color.BLACK;
             }
-            return pieces.get(name.charAt(1)).create(peiceColor);
+            if (pieces.get(name.charAt(1)).create(peiceColor) != null) {
+                return pieces.get(name.charAt(1)).create(peiceColor);
+            } else {
+                throw new UnsupportedOperationException();
+            }
         } else {
             throw new UnsupportedOperationException();
         }
