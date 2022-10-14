@@ -20,7 +20,7 @@ public class Pawn extends Piece {
         Piece p = b.getPiece(loc);
 	    
 	if(p == null) {
-            throw new UnsupportedOperationException();
+           return moves;
         }
 
         if (p.color() == Color.WHITE) {
