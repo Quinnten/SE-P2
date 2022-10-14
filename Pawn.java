@@ -34,14 +34,14 @@ public class Pawn extends Piece {
 
             if (col - 1 >= 0 && b.getPiece(b.toGrid(col-1, row+1)) != null) {  //check to see if I can capture left
                 Piece p2 = b.getPiece(b.toGrid(col-1, row+1));
-                if (b.isEnemy(p, p2)) {
+                if (p2.color() != color) {
                 moves.add(b.toGrid(col-1, row+1));
                 }
             }
 
             if (col + 1 <= 7 && b.getPiece(b.toGrid(col+1, row+1)) != null) { //check to see if I can capture right
                 Piece p2 = b.getPiece(b.toGrid(col+1, row+1));
-                if (b.isEnemy(p, p2)) {
+                if (p2.color() != color) {
                     moves.add(b.toGrid(col+1, row+1));
                 }
             }
@@ -58,13 +58,13 @@ public class Pawn extends Piece {
             }
             if (col-1 >= 0 && b.getPiece(b.toGrid(col-1, row-1)) != null) {   //check to see if I can capture left            
                 Piece p2 = b.getPiece(b.toGrid(col-1, row-1));
-                if (b.isEnemy(p, p2)) {
+                if (p2.color() != color) {
                     moves.add(b.toGrid(col-1, row-1));
                 }
             }
             if (col + 1 <= 7 && b.getPiece(b.toGrid(col+1, row-1)) != null) {  //check to see if I can capture right
                 Piece p2 = b.getPiece(b.toGrid(col+1, row-1));
-                if (b.isEnemy(p, p2)) {
+                if (p2.color() != color) {
                     moves.add(b.toGrid(col+1, row-1));
                 }   
             }
